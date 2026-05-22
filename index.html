@@ -1,0 +1,903 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alto Cauce | Web, ventas, comunicación. Optimizamos tu negocio.</title>
+  <meta name="description" content="Años acompañando y potenciando proyectos y emprendimientos. Sitios web, catálogos digitales y sistemas internos para cabañas, minimarkets, supermercados, ferreterías y servicios de Saltos del Laja y la Región del Biobío." />
+  <meta name="theme-color" content="#0b1120" />
+  <link rel="canonical" href="https://altocauce.cl/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://altocauce.cl" />
+  <meta property="og:title" content="Alto Cauce | Web, ventas, comunicación. Optimizamos tu negocio." />
+  <meta property="og:description" content="Años acompañando proyectos y emprendimientos. Web, catálogos y sistemas internos para el comercio local de Saltos del Laja y la Región del Biobío." />
+  <meta property="og:image" content="https://altocauce.cl/alto-cauce-social.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_CL" />
+  <link rel="icon" type="image/svg+xml" href="/alto-cauce-isologo.svg" />
+  <link rel="apple-touch-icon" href="/alto-cauce-isologo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ---------- Brand tokens (preservados del sitio anterior) ---------- */
+    :root{
+      --navy: 222 47% 8%;
+      --navy-mid: 214 52% 14%;
+      --navy-soft: 215 35% 22%;
+      --sky: 199 88% 45%;
+      --sky-soft: 199 80% 60%;
+      --ember: 22 92% 52%;
+      --ember-soft: 32 95% 62%;
+      --surface: 220 20% 97%;
+      --surface-2: 220 24% 94%;
+      --border: 220 16% 90%;
+      --ink: 222 47% 11%;
+      --ink-soft: 215 19% 35%;
+      --muted: 215 14% 50%;
+      --radius: 14px;
+      --radius-lg: 22px;
+      --max: 1180px;
+      --shadow-sm: 0 1px 2px rgba(11,17,32,.06), 0 2px 6px rgba(11,17,32,.04);
+      --shadow-md: 0 8px 24px rgba(11,17,32,.08), 0 2px 6px rgba(11,17,32,.05);
+      --shadow-lg: 0 24px 60px rgba(11,17,32,.18), 0 8px 24px rgba(11,17,32,.10);
+    }
+
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{
+      margin:0;
+      font-family:'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      font-size:16px;
+      line-height:1.55;
+      color:hsl(var(--ink));
+      background:hsl(var(--surface));
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    img{max-width:100%;display:block;height:auto}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;cursor:pointer;border:0;background:transparent;color:inherit}
+
+    /* ---------- Layout ---------- */
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+    @media (min-width:700px){ .wrap{padding:0 32px} }
+
+    section{padding:88px 0;position:relative}
+    @media (min-width:900px){ section{padding:120px 0} }
+
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;
+      font-size:12px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;
+      color:hsl(var(--ink-soft));
+    }
+    .eyebrow::before{
+      content:"";width:24px;height:1px;background:hsl(var(--ember));display:inline-block;
+    }
+
+    h1,h2,h3,h4{font-weight:700;letter-spacing:-0.02em;color:hsl(var(--ink));margin:0}
+    h1{font-size:clamp(38px, 6vw, 64px); line-height:1.05}
+    h2{font-size:clamp(30px, 4.2vw, 46px); line-height:1.1}
+    h3{font-size:clamp(20px, 2.2vw, 24px); line-height:1.25}
+    .serif{font-family:'Instrument Serif', Georgia, serif; font-weight:400; letter-spacing:-0.01em}
+    .serif-italic{font-family:'Instrument Serif', Georgia, serif; font-style:italic; font-weight:400; letter-spacing:-0.005em}
+
+    p{margin:0 0 1em}
+    .lede{font-size:clamp(17px, 1.5vw, 19px); color:hsl(var(--ink-soft)); max-width:60ch}
+    .muted{color:hsl(var(--muted))}
+
+    /* ---------- Buttons ---------- */
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:13px 22px;border-radius:999px;font-weight:600;font-size:15px;
+      transition:transform .15s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+      white-space:nowrap;
+    }
+    .btn-primary{
+      background:hsl(var(--ember));color:#fff;
+      box-shadow:0 8px 24px hsl(var(--ember)/.28), inset 0 -2px 0 rgba(0,0,0,.08);
+    }
+    .btn-primary:hover{transform:translateY(-1px);background:hsl(var(--ember-soft));box-shadow:0 12px 28px hsl(var(--ember)/.32), inset 0 -2px 0 rgba(0,0,0,.08)}
+    .btn-ghost{
+      background:transparent;color:hsl(var(--ink));
+      border:1px solid hsl(var(--border));
+    }
+    .btn-ghost:hover{border-color:hsl(var(--ink-soft))}
+    .btn-dark{
+      background:hsl(var(--navy));color:#fff;
+    }
+    .btn-dark:hover{background:hsl(var(--navy-mid))}
+    .btn-link{
+      color:hsl(var(--ink));font-weight:600;display:inline-flex;align-items:center;gap:6px;
+      border-bottom:1px solid transparent;padding-bottom:2px;
+    }
+    .btn-link:hover{border-bottom-color:hsl(var(--ember))}
+    .btn-link .arr{transition:transform .2s ease}
+    .btn-link:hover .arr{transform:translateX(4px)}
+    .ico{width:18px;height:18px;flex-shrink:0}
+
+    /* ---------- Nav ---------- */
+    .nav{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:saturate(180%) blur(14px);
+      -webkit-backdrop-filter:saturate(180%) blur(14px);
+      background:hsla(0,0%,100%,.78);
+      border-bottom:1px solid hsl(var(--border));
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:24px}
+    .nav-brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-0.01em}
+    .nav-brand img{height:32px;width:32px}
+    .nav-brand .name{font-size:18px;color:hsl(var(--ink))}
+    .nav-brand .dot{color:hsl(var(--ember));font-weight:800;margin:0 1px}
+    .nav-links{display:none;align-items:center;gap:28px}
+    .nav-links a{font-size:14px;font-weight:500;color:hsl(var(--ink-soft));transition:color .15s}
+    .nav-links a:hover{color:hsl(var(--ink))}
+    .nav-cta{display:none}
+    .nav-toggle{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;border:1px solid hsl(var(--border))}
+    @media (min-width:900px){
+      .nav-links{display:flex}
+      .nav-cta{display:inline-flex}
+      .nav-toggle{display:none}
+    }
+    .nav-mobile{
+      display:none;border-top:1px solid hsl(var(--border));
+      background:#fff;
+    }
+    .nav-mobile.open{display:block}
+    .nav-mobile a{
+      display:block;padding:14px 24px;font-weight:500;color:hsl(var(--ink-soft));
+      border-bottom:1px solid hsl(var(--border));
+    }
+    .nav-mobile a:last-child{border-bottom:0}
+
+    /* ---------- Hero ---------- */
+    .hero{
+      padding:90px 0 90px;
+      background:
+        radial-gradient(900px 500px at 85% -10%, hsl(var(--sky)/.10) 0%, transparent 60%),
+        radial-gradient(700px 400px at -10% 30%, hsl(var(--ember)/.07) 0%, transparent 60%),
+        hsl(var(--surface));
+      position:relative;overflow:hidden;
+    }
+    .hero-grid{display:grid;gap:64px;align-items:center}
+    @media (min-width:980px){ .hero-grid{grid-template-columns:1.15fr .85fr;gap:80px} }
+    .hero h1{margin:18px 0 22px}
+    .hero h1 .accent{
+      font-family:'Instrument Serif', Georgia, serif; font-style:italic; font-weight:400;
+      color:hsl(var(--ember)); letter-spacing:-0.005em;
+    }
+    .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+    .hero-meta{
+      display:flex;flex-wrap:wrap;gap:24px 32px;margin-top:40px;
+      padding-top:28px;border-top:1px solid hsl(var(--border));
+      font-size:13px;color:hsl(var(--ink-soft));
+    }
+    .hero-meta strong{display:block;color:hsl(var(--ink));font-size:15px;font-weight:600;margin-bottom:2px}
+
+    /* Hero visual: stylized logo composition */
+    .hero-art{
+      position:relative;aspect-ratio:5/4;
+      border-radius:var(--radius-lg);
+      background:
+        radial-gradient(450px 280px at 70% 30%, hsl(var(--sky)/.18), transparent 70%),
+        radial-gradient(380px 250px at 25% 75%, hsl(var(--ember)/.15), transparent 70%),
+        linear-gradient(140deg, hsl(var(--navy)), hsl(var(--navy-mid)) 70%);
+      box-shadow:var(--shadow-lg);
+      overflow:hidden;
+      display:flex;align-items:center;justify-content:center;
+    }
+    .hero-art::before{
+      content:"";position:absolute;inset:0;
+      background-image:
+        linear-gradient(hsl(var(--sky)/.06) 1px, transparent 1px),
+        linear-gradient(90deg, hsl(var(--sky)/.06) 1px, transparent 1px);
+      background-size:32px 32px;
+      mask-image:radial-gradient(circle at 50% 50%, #000 30%, transparent 75%);
+      -webkit-mask-image:radial-gradient(circle at 50% 50%, #000 30%, transparent 75%);
+    }
+    .hero-art-content{position:relative;color:#fff;text-align:center;padding:32px;max-width:88%}
+    .hero-art-content .marca{
+      font-family:'Instrument Serif', Georgia, serif;
+      font-weight:400;
+      font-size:clamp(40px, 6vw, 72px);
+      letter-spacing:-0.01em;line-height:1.05;margin:14px 0 0;
+      color:#f1f5f9;
+    }
+    .hero-art-content .marca em{font-style:italic;color:hsl(var(--ember-soft));font-weight:400}
+    .hero-art-content .sub{
+      margin-top:18px;font-size:13px;letter-spacing:3px;text-transform:uppercase;
+      color:hsl(var(--sky-soft));font-weight:600;
+    }
+    .hero-art-content .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 14px;margin-top:24px;border-radius:999px;
+      background:hsla(0,0%,100%,.08);border:1px solid hsla(0,0%,100%,.14);
+      font-size:12px;color:#cbd5e1;
+    }
+    .hero-art-content .badge .pulse{
+      width:8px;height:8px;border-radius:50%;background:#10b981;
+      box-shadow:0 0 0 0 #10b981;animation:pulse 2s infinite;
+    }
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 0 rgba(16,185,129,.6)}
+      70%{box-shadow:0 0 0 10px rgba(16,185,129,0)}
+      100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}
+    }
+
+    /* ---------- Sectores (Para quién) ---------- */
+    .sectores{background:#fff;border-top:1px solid hsl(var(--border));border-bottom:1px solid hsl(var(--border))}
+    .head{max-width:780px;margin-bottom:56px}
+    .head h2{margin:14px 0 18px}
+    .grid-sectores{
+      display:grid;gap:18px;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .sector{
+      padding:28px 26px;border-radius:var(--radius);
+      background:hsl(var(--surface));
+      border:1px solid hsl(var(--border));
+      transition:border-color .2s, transform .2s, box-shadow .2s;
+      position:relative;
+    }
+    .sector:hover{border-color:hsl(var(--ember)/.5);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+    .sector .ic{
+      width:42px;height:42px;border-radius:11px;
+      display:inline-flex;align-items:center;justify-content:center;
+      background:hsl(var(--ember)/.12);color:hsl(var(--ember));
+      margin-bottom:18px;
+    }
+    .sector .ic svg{width:22px;height:22px}
+    .sector h3{font-size:18px;margin-bottom:8px}
+    .sector p{font-size:14px;color:hsl(var(--ink-soft));margin:0;line-height:1.55}
+
+    /* ---------- Servicios ---------- */
+    .servicios{background:hsl(var(--surface))}
+    .servicio-stack{display:grid;gap:18px}
+    @media (min-width:760px){ .servicio-stack{grid-template-columns:repeat(2,1fr)} }
+    .servicio{
+      background:#fff;border:1px solid hsl(var(--border));
+      border-radius:var(--radius-lg);
+      padding:32px 30px;
+      transition:border-color .2s, transform .2s, box-shadow .2s;
+      display:flex;flex-direction:column;
+    }
+    .servicio:hover{border-color:hsl(var(--navy)/.3);box-shadow:var(--shadow-md)}
+    .servicio .num{
+      font-family:'Instrument Serif', Georgia, serif;font-style:italic;
+      font-size:42px;color:hsl(var(--ember));line-height:1;margin-bottom:14px;
+    }
+    .servicio h3{margin-bottom:10px}
+    .servicio p{font-size:15px;color:hsl(var(--ink-soft))}
+    .servicio ul{margin:18px 0 0;padding:0;list-style:none;border-top:1px solid hsl(var(--border));padding-top:18px}
+    .servicio ul li{
+      font-size:14px;color:hsl(var(--ink-soft));
+      padding:7px 0 7px 22px;position:relative;
+    }
+    .servicio ul li::before{
+      content:"";position:absolute;left:0;top:13px;
+      width:10px;height:2px;background:hsl(var(--sky));border-radius:2px;
+    }
+
+    /* ---------- Proyectos ---------- */
+    .proyectos{background:#fff;border-top:1px solid hsl(var(--border));border-bottom:1px solid hsl(var(--border))}
+    .proy-feature{
+      display:grid;gap:36px;align-items:center;
+      padding:36px;margin-bottom:24px;
+      background:hsl(var(--surface));border:1px solid hsl(var(--border));
+      border-radius:var(--radius-lg);
+      transition:border-color .2s;
+    }
+    @media (min-width:900px){
+      .proy-feature{grid-template-columns:1.1fr .9fr;padding:48px;gap:56px}
+      .proy-feature.reverse > .proy-info{order:2}
+      .proy-feature.reverse > .proy-thumb{order:1}
+    }
+    .proy-feature:hover{border-color:hsl(var(--sky)/.5)}
+    .proy-thumb{
+      position:relative;border-radius:var(--radius);overflow:hidden;
+      box-shadow:var(--shadow-lg);
+      transform:rotate(-0.5deg);transition:transform .35s ease;
+      background:hsl(var(--navy));
+      aspect-ratio:16/10;
+    }
+    .proy-feature.reverse .proy-thumb{transform:rotate(0.5deg)}
+    .proy-feature:hover .proy-thumb{transform:rotate(0deg) scale(1.01)}
+    .proy-thumb img{width:100%;height:100%;object-fit:cover;object-position:top center}
+    .proy-tag{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+      color:hsl(var(--sky));
+    }
+    .proy-tag::before{content:"";width:14px;height:1px;background:hsl(var(--sky))}
+    .proy-info h3{
+      font-size:clamp(24px, 2.6vw, 30px);margin:14px 0 14px;line-height:1.15;
+    }
+    .proy-info h3 em{
+      font-family:'Instrument Serif', Georgia, serif;font-style:italic;font-weight:400;
+      color:hsl(var(--ember));
+    }
+    .proy-info p{color:hsl(var(--ink-soft));font-size:15.5px}
+    .proy-features{
+      display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 24px;
+    }
+    .chip{
+      font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;
+      background:#fff;border:1px solid hsl(var(--border));color:hsl(var(--ink-soft));
+    }
+    .proy-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:8px}
+
+    .proy-mini-grid{
+      display:grid;gap:18px;margin-top:36px;
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .proy-mini{
+      padding:26px 24px;border-radius:var(--radius);
+      background:hsl(var(--surface));border:1px solid hsl(var(--border));
+    }
+    .proy-mini .proy-tag{color:hsl(var(--ember))}
+    .proy-mini .proy-tag::before{background:hsl(var(--ember))}
+    .proy-mini h4{font-size:18px;margin:10px 0 8px;font-weight:700}
+    .proy-mini p{font-size:14px;color:hsl(var(--ink-soft));margin:0}
+
+    /* ---------- Proceso ---------- */
+    .proceso{background:hsl(var(--surface))}
+    .proceso-grid{
+      display:grid;gap:20px;
+      grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+    }
+    .paso{
+      padding:28px 26px;border-radius:var(--radius);
+      background:#fff;border:1px solid hsl(var(--border));
+      position:relative;
+    }
+    .paso .step{
+      font-family:'Instrument Serif', Georgia, serif;
+      font-size:48px;line-height:1;color:hsl(var(--sky));margin:0 0 12px;
+    }
+    .paso h3{font-size:18px;margin-bottom:8px}
+    .paso p{font-size:14px;color:hsl(var(--ink-soft));margin:0}
+
+    /* ---------- Equipo ---------- */
+    .equipo{background:#fff;border-top:1px solid hsl(var(--border));border-bottom:1px solid hsl(var(--border))}
+    .equipo-grid{
+      display:grid;gap:24px;
+      grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+      margin-bottom:36px;
+    }
+    .persona{
+      padding:32px 28px 28px;border-radius:var(--radius-lg);
+      background:hsl(var(--surface));border:1px solid hsl(var(--border));
+      transition:border-color .2s, transform .2s;
+    }
+    .persona:hover{border-color:hsl(var(--ember)/.4);transform:translateY(-2px)}
+    .persona .avatar{
+      width:88px;height:88px;border-radius:50%;overflow:hidden;
+      background:#fff;border:1px solid hsl(var(--border));
+      margin-bottom:20px;
+      display:flex;align-items:center;justify-content:center;
+    }
+    .persona .avatar img{width:100%;height:100%;object-fit:cover}
+    .persona .nombre{font-size:20px;font-weight:700;margin:0}
+    .persona .rol{
+      font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
+      color:hsl(var(--ember));margin:6px 0 16px;
+    }
+    .persona .bio{font-size:14.5px;color:hsl(var(--ink-soft));margin:0 0 18px}
+    .persona .wa{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:13px;font-weight:600;color:hsl(var(--ink));
+      padding:8px 14px;border-radius:999px;
+      background:#fff;border:1px solid hsl(var(--border));
+      transition:border-color .2s, color .2s;
+    }
+    .persona .wa:hover{border-color:#25D366;color:#0a7f3f}
+    .persona .wa svg{width:14px;height:14px;color:#25D366}
+
+    .equipo-nota{
+      padding:24px 28px;border-radius:var(--radius);
+      background:hsl(var(--surface));border:1px dashed hsl(var(--border));
+      font-size:14.5px;color:hsl(var(--ink-soft));
+    }
+
+    /* ---------- Contacto cierre ---------- */
+    .cta-final{
+      background:
+        radial-gradient(800px 400px at 80% 100%, hsl(var(--ember)/.18), transparent 60%),
+        radial-gradient(700px 400px at 20% 0%, hsl(var(--sky)/.18), transparent 60%),
+        linear-gradient(160deg, hsl(var(--navy)), hsl(var(--navy-mid)));
+      color:#fff;padding:96px 0;
+    }
+    .cta-final h2{color:#fff}
+    .cta-final h2 em{
+      font-family:'Instrument Serif', Georgia, serif;font-style:italic;font-weight:400;
+      color:hsl(var(--ember-soft));
+    }
+    .cta-final .eyebrow{color:hsl(var(--sky-soft))}
+    .cta-final p{color:#cbd5e1;max-width:60ch}
+    .cta-final .btn-ghost{
+      color:#fff;border-color:hsla(0,0%,100%,.22);
+    }
+    .cta-final .btn-ghost:hover{border-color:#fff}
+    .cta-final-grid{display:grid;gap:40px;align-items:end}
+    @media (min-width:900px){ .cta-final-grid{grid-template-columns:1.4fr 1fr} }
+    .cta-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+    .cta-card{
+      padding:28px;border-radius:var(--radius);
+      background:hsla(0,0%,100%,.04);border:1px solid hsla(0,0%,100%,.10);
+      backdrop-filter:blur(8px);
+    }
+    .cta-card .line{
+      display:flex;align-items:flex-start;gap:14px;padding:10px 0;
+      font-size:14px;color:#cbd5e1;
+    }
+    .cta-card .line svg{width:18px;height:18px;color:hsl(var(--sky-soft));margin-top:2px;flex-shrink:0}
+    .cta-card .line strong{display:block;color:#fff;font-weight:600;font-size:15px;margin-bottom:2px}
+    .cta-card .line + .line{border-top:1px solid hsla(0,0%,100%,.08)}
+
+    /* ---------- Footer ---------- */
+    footer{background:#fff;padding:40px 0;border-top:1px solid hsl(var(--border));font-size:13px;color:hsl(var(--muted))}
+    .foot{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+    .foot-brand{display:flex;align-items:center;gap:10px;color:hsl(var(--ink-soft));font-weight:600}
+    .foot-brand img{height:24px;width:24px}
+
+    /* ---------- Animations ---------- */
+    @media (prefers-reduced-motion: no-preference){
+      .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
+      .reveal.in{opacity:1;transform:translateY(0)}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========= NAV ========= -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#inicio" class="nav-brand" aria-label="Alto Cauce, inicio">
+        <img src="/alto-cauce-isologo.svg" alt="" />
+        <span class="name">Alto Cauce<span class="dot">.</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#sectores">Para quién</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#proceso">Cómo trabajamos</a>
+        <a href="#equipo">Equipo</a>
+      </nav>
+      <a class="btn btn-dark nav-cta" href="https://wa.me/56982675903?text=Hola%20Alto%20Cauce%2C%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5 0-.1-.6-1.4-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2 0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3M12.1 21.7c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3.3.9.9-3.2-.2-.3c-.9-1.4-1.3-3-1.3-4.6 0-4.7 3.9-8.6 8.6-8.6 2.3 0 4.5.9 6.1 2.5 1.6 1.6 2.5 3.8 2.5 6.1.1 4.8-3.7 8.6-8.5 8.6m7.3-15.9C17.5 3.8 14.9 2.8 12 2.8 6.2 2.8 1.5 7.5 1.5 13.3c0 1.9.5 3.7 1.4 5.3L1.4 24l5.5-1.4c1.6.9 3.3 1.3 5.1 1.3 5.8 0 10.5-4.7 10.5-10.5.1-2.8-1-5.4-3.1-7.4"/></svg>
+        WhatsApp
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#sectores">Para quién</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#proceso">Cómo trabajamos</a>
+      <a href="#equipo">Equipo</a>
+      <a href="https://wa.me/56982675903" target="_blank" rel="noopener" style="color:hsl(var(--ember))">Conversar por WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- ========= HERO ========= -->
+  <main id="inicio">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Saltos del Laja · Región del Biobío</span>
+        <h1>
+          Web, ventas, comunicación.<br/>
+          <span class="accent">Optimizamos tu negocio.</span>
+        </h1>
+        <p class="lede">
+          Llevamos años acompañando y potenciando proyectos y emprendimientos.
+          Sitios web, catálogos digitales y sistemas internos para cabañas,
+          minimarkets, supermercados, ferreterías y servicios de la zona.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="https://wa.me/56982675903?text=Hola%20Alto%20Cauce%2C%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5 0-.1-.6-1.4-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2 0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3M12.1 21.7c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3.3.9.9-3.2-.2-.3c-.9-1.4-1.3-3-1.3-4.6 0-4.7 3.9-8.6 8.6-8.6 2.3 0 4.5.9 6.1 2.5 1.6 1.6 2.5 3.8 2.5 6.1.1 4.8-3.7 8.6-8.5 8.6m7.3-15.9C17.5 3.8 14.9 2.8 12 2.8 6.2 2.8 1.5 7.5 1.5 13.3c0 1.9.5 3.7 1.4 5.3L1.4 24l5.5-1.4c1.6.9 3.3 1.3 5.1 1.3 5.8 0 10.5-4.7 10.5-10.5.1-2.8-1-5.4-3.1-7.4"/></svg>
+            Conversar por WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="#proyectos">Ver proyectos</a>
+        </div>
+        <div class="hero-meta">
+          <div>
+            <strong>Sin formularios</strong>
+            Te responde una persona, directo.
+          </div>
+          <div>
+            <strong>Base local</strong>
+            Saltos del Laja, Biobío.
+          </div>
+          <div>
+            <strong>Diagnóstico gratuito</strong>
+            Antes de cualquier propuesta.
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-art-content">
+          <p class="sub">Alto Cauce · 2026</p>
+          <h2 class="marca">Web, <em>catálogo</em> &amp; control.</h2>
+          <span class="badge"><span class="pulse"></span>Atendiendo nuevos proyectos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= SECTORES ========= -->
+  <section class="sectores" id="sectores">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow">Para quién es esto</span>
+        <h2>Pensado para el <span class="serif-italic">comercio que mueve la zona</span>.</h2>
+        <p class="lede">
+          Negocios chicos y medianos que funcionan todos los días, atienden público
+          real y necesitan herramientas digitales que se entiendan a la primera —
+          no proyectos de agencia con presupuestos de oficina.
+        </p>
+      </div>
+
+      <div class="grid-sectores">
+        <article class="sector reveal">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg></span>
+          <h3>Cabañas y alojamientos</h3>
+          <p>Sitio que muestre las cabañas con fotos buenas, disponibilidad clara y reserva directa por WhatsApp. Sin OTA si no te conviene.</p>
+        </article>
+
+        <article class="sector reveal">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M8 6V4m8 2V4"/></svg></span>
+          <h3>Minimarkets y almacenes</h3>
+          <p>Catálogo digital con horarios, ubicación y pedidos por WhatsApp. Lo que te diferencia: cercanía, no precios bajos.</p>
+        </article>
+
+        <article class="sector reveal">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18l-1.4 9.3a2 2 0 0 1-2 1.7H6.4a2 2 0 0 1-2-1.7L3 7z"/><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/><path d="M3 7 2 3H0"/></svg></span>
+          <h3>Supermercados locales</h3>
+          <p>Vitrina online con ofertas semanales, pedidos por delivery local y panel sencillo para que tu equipo cargue novedades.</p>
+        </article>
+
+        <article class="sector reveal">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a3 3 0 0 0-4.4 4.4l-7 7V21h3.3l7-7a3 3 0 0 0 4.4-4.4l-2.4 2.4-2.3-2.3 2.4-2.4z"/></svg></span>
+          <h3>Ferreterías</h3>
+          <p>Sitio que liste lo que tienes en stock, atienda dudas técnicas por WhatsApp y muestre proyectos terminados. Cierra venta antes que el cliente llegue.</p>
+        </article>
+
+        <article class="sector reveal">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21v-7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v7"/><path d="M5 21h14M7 12V7a5 5 0 0 1 10 0v5M9 7h6"/></svg></span>
+          <h3>Restaurantes y turismo</h3>
+          <p>Carta digital con QR, reservas por WhatsApp, integración con Google Maps. Pensado para el flujo de fin de semana en Saltos del Laja.</p>
+        </article>
+
+        <article class="sector reveal">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg></span>
+          <h3>Pymes y servicios</h3>
+          <p>Talleres, lavanderías, transportes, servicios técnicos. Una vitrina seria que respalde lo que tu negocio ya entrega bien.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= SERVICIOS ========= -->
+  <section class="servicios" id="servicios">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow">Qué hacemos</span>
+        <h2>Tres formas de <span class="serif-italic">acompañarte</span>, según en qué etapa estés.</h2>
+        <p class="lede">
+          No vendemos paquetes cerrados. Conversamos primero, vemos qué duele
+          más, y partimos por ahí. Lo otro se construye después.
+        </p>
+      </div>
+
+      <div class="servicio-stack">
+
+        <article class="servicio reveal">
+          <span class="num">01</span>
+          <h3>Sitios web que generan contacto</h3>
+          <p>Una vitrina seria que comunica bien quién eres, qué ofreces y por qué deben elegirte. No solo presencia: pensado para convertir visitas en consultas concretas.</p>
+          <ul>
+            <li>Diseño adaptado a tu rubro y al tipo de cliente que recibes</li>
+            <li>Integración directa con WhatsApp, Google Maps y correo</li>
+            <li>Optimizado para Google y para celular (donde te encuentran)</li>
+            <li>Fácil de actualizar sin depender de nosotros</li>
+          </ul>
+        </article>
+
+        <article class="servicio reveal">
+          <span class="num">02</span>
+          <h3>Catálogos y mini-tiendas digitales</h3>
+          <p>Para el minimarket, la ferretería o el supermercado que quiere mostrar productos, recibir pedidos y dejar de mandar fotos sueltas por WhatsApp.</p>
+          <ul>
+            <li>Carga simple de productos con foto, precio y stock</li>
+            <li>Pedidos que llegan ordenados a WhatsApp o correo</li>
+            <li>Panel para tu equipo, sin curva de aprendizaje</li>
+            <li>Crece de a poco: partes con 20 productos, sumas más cuando funciona</li>
+          </ul>
+        </article>
+
+        <article class="servicio reveal">
+          <span class="num">03</span>
+          <h3>Webapps y sistemas internos</h3>
+          <p>Si tu equipo coordina con audios, llamadas o planillas, podemos construir la herramienta que centralice eso. Pensada para el operativo real, no para gerencia.</p>
+          <ul>
+            <li>Registro de pedidos, avances y responsables por área</li>
+            <li>Control de gastos y caja chica en tiempo real</li>
+            <li>Roles y accesos según cargo o frente de trabajo</li>
+            <li>Paneles simples que se entienden a la primera</li>
+          </ul>
+        </article>
+
+        <article class="servicio reveal">
+          <span class="num">04</span>
+          <h3>Acompañamiento real</h3>
+          <p>La entrega no es el final. Si algo no funciona en la práctica, lo ajustamos. Si quieres sumar una cosa más, lo conversamos. No desaparecemos después de publicar.</p>
+          <ul>
+            <li>Capacitación en vivo con quien va a usar la herramienta</li>
+            <li>Respaldo y soporte mensual con costo claro y acotado</li>
+            <li>Pequeños ajustes incluidos los primeros meses</li>
+            <li>Hablas con la misma persona que construyó tu proyecto</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= PROYECTOS ========= -->
+  <section class="proyectos" id="proyectos">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow">Proyectos</span>
+        <h2>Años acompañando <span class="serif-italic">proyectos y emprendimientos</span>.</h2>
+        <p class="lede">
+          Estos son algunos de los proyectos activos hoy. Cada uno con
+          clientes reales que usan lo que entregamos todos los días.
+        </p>
+      </div>
+
+      <!-- Bellavista (principal) -->
+      <article class="proy-feature reveal">
+        <div class="proy-info">
+          <span class="proy-tag">Sitio web · multi-negocio · local</span>
+          <h3>Bellavista — <em>el complejo a orillas del Río Laja</em>.</h3>
+          <p>
+            Camping, minimarket, eventos e internet nativo, todo en un solo lugar
+            cercano a Saltos del Laja. Construimos su vitrina digital para que cada
+            servicio tenga su espacio sin perder la marca paraguas: una home limpia
+            que reparte tráfico a cada negocio, con horarios en vivo, ubicación a
+            un toque y contacto directo por WhatsApp.
+          </p>
+          <div class="proy-features">
+            <span class="chip">Home con estado de cada servicio</span>
+            <span class="chip">Subsitios por negocio</span>
+            <span class="chip">QR imprimible para el punto físico</span>
+            <span class="chip">WhatsApp como canal principal</span>
+          </div>
+          <div class="proy-actions">
+            <a class="btn btn-dark" href="https://bellavista-topaz.vercel.app/" target="_blank" rel="noopener">Visitar el sitio</a>
+            <a class="btn-link" href="https://wa.me/56982675903?text=Me%20interesa%20algo%20parecido%20a%20Bellavista." target="_blank" rel="noopener">Quiero algo así <span class="arr">→</span></a>
+          </div>
+        </div>
+        <a class="proy-thumb" href="https://bellavista-topaz.vercel.app/" target="_blank" rel="noopener" aria-label="Visitar sitio de Bellavista">
+          <img src="/img/proyecto-bellavista.jpg" alt="Captura del sitio Bellavista mostrando Camping, Minimarket y servicios cercanos a Saltos del Laja" loading="lazy" />
+        </a>
+      </article>
+
+      <!-- Paesaggio Vivero -->
+      <article class="proy-feature reverse reveal">
+        <div class="proy-info">
+          <span class="proy-tag">Sitio + catálogo · mayorista &amp; minorista</span>
+          <h3>Paesaggio Vivero — <em>catálogo serio</em> para un productor mendocino.</h3>
+          <p>
+            Vivero productor en Mendoza, Argentina, con venta mayorista a paisajistas,
+            arquitectos y proyectos de obra. Diseñamos un sitio editorial con
+            catálogo categorizado, ficha por especie, sección mayorista con coordinación
+            por WhatsApp y un tono visual que respalda la calidad de su producción.
+          </p>
+          <div class="proy-features">
+            <span class="chip">Catálogo navegable por categoría</span>
+            <span class="chip">Sección mayorista B2B</span>
+            <span class="chip">Cotización vía WhatsApp</span>
+            <span class="chip">Identidad editorial</span>
+          </div>
+          <div class="proy-actions">
+            <a class="btn btn-dark" href="https://vivero-xi-flax.vercel.app/" target="_blank" rel="noopener">Visitar el sitio</a>
+            <a class="btn-link" href="https://wa.me/56982675903?text=Me%20interesa%20un%20cat%C3%A1logo%20como%20el%20de%20Paesaggio." target="_blank" rel="noopener">Quiero algo así <span class="arr">→</span></a>
+          </div>
+        </div>
+        <a class="proy-thumb" href="https://vivero-xi-flax.vercel.app/" target="_blank" rel="noopener" aria-label="Visitar sitio de Paesaggio Vivero">
+          <img src="/img/proyecto-paesaggio.jpg" alt="Captura del sitio Paesaggio Vivero mostrando hero con Strelitzia y propuesta de plantas con identidad" loading="lazy" />
+        </a>
+      </article>
+
+      <!-- Mini proyectos -->
+      <div class="proy-mini-grid">
+        <article class="proy-mini reveal">
+          <span class="proy-tag">Sistema interno · hotelería</span>
+          <h4>New Hotel Cruz del Sur</h4>
+          <p>Pedidos entre recepción y cocina con estado en vivo. Sin papeles, sin audios. En operación diaria desde 2025.</p>
+        </article>
+        <article class="proy-mini reveal">
+          <span class="proy-tag">Webapp operativa · servicios</span>
+          <h4>Control operativo multi-región</h4>
+          <p>Seguimiento de avances, gastos y equipo en terreno desde una sola plataforma. En uso activo por el equipo del cliente.</p>
+        </article>
+        <article class="proy-mini reveal">
+          <span class="proy-tag">Cupo abierto</span>
+          <h4>Tu proyecto acá</h4>
+          <p>Trabajamos con un número acotado de proyectos a la vez. Si es tu rubro, conversemos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= PROCESO ========= -->
+  <section class="proceso" id="proceso">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow">Cómo trabajamos</span>
+        <h2>Un proceso <span class="serif-italic">directo</span>. Sin metodologías innecesarias.</h2>
+        <p class="lede">
+          El objetivo es entender rápido el problema real y construir algo que
+          se adopte. Nada de propuestas genéricas ni reuniones de relleno.
+        </p>
+      </div>
+      <div class="proceso-grid">
+        <div class="paso reveal">
+          <span class="step">01</span>
+          <h3>Conversación inicial</h3>
+          <p>Entendemos cómo opera tu negocio hoy, qué duele más y qué tiene más sentido resolver primero.</p>
+        </div>
+        <div class="paso reveal">
+          <span class="step">02</span>
+          <h3>Identificamos el nudo</h3>
+          <p>Buscamos el punto donde se pierde más tiempo, ventas o claridad. Ahí empieza la solución.</p>
+        </div>
+        <div class="paso reveal">
+          <span class="step">03</span>
+          <h3>Propuesta concreta</h3>
+          <p>Qué haríamos, en qué plazo, a qué costo. Sin paquetes cerrados. Tú decides si avanzamos.</p>
+        </div>
+        <div class="paso reveal">
+          <span class="step">04</span>
+          <h3>Construir y acompañar</h3>
+          <p>Desarrollamos, implementamos y seguimos disponibles. Un proyecto no termina cuando se publica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= EQUIPO ========= -->
+  <section class="equipo" id="equipo">
+    <div class="wrap">
+      <div class="head reveal" style="margin-bottom:48px">
+        <h2>Equipo Alto Cauce.</h2>
+      </div>
+
+      <div class="equipo-grid">
+
+        <article class="persona reveal">
+          <p class="nombre">Marco Carbonetti</p>
+          <p class="rol">Developer</p>
+          <p class="bio">Diseña la arquitectura y desarrolla cada solución. Define cómo se presenta el producto y qué priorizar en cada etapa del proyecto.</p>
+          <a class="wa" href="https://wa.me/56982675903" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5 0-.1-.6-1.4-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2 0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3M12.1 21.7c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3.3.9.9-3.2-.2-.3c-.9-1.4-1.3-3-1.3-4.6 0-4.7 3.9-8.6 8.6-8.6 2.3 0 4.5.9 6.1 2.5 1.6 1.6 2.5 3.8 2.5 6.1.1 4.8-3.7 8.6-8.5 8.6m7.3-15.9C17.5 3.8 14.9 2.8 12 2.8 6.2 2.8 1.5 7.5 1.5 13.3c0 1.9.5 3.7 1.4 5.3L1.4 24l5.5-1.4c1.6.9 3.3 1.3 5.1 1.3 5.8 0 10.5-4.7 10.5-10.5.1-2.8-1-5.4-3.1-7.4"/></svg>
+            +56 9 8267 5903
+          </a>
+        </article>
+
+        <article class="persona reveal">
+          <p class="nombre">Pía Faundez</p>
+          <p class="rol">Administración</p>
+          <p class="bio">Gestiona la administración del estudio: planificación, facturación, contratos y coordinación interna de cada proyecto.</p>
+          <a class="wa" href="https://wa.me/56982675903" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5 0-.1-.6-1.4-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2 0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3M12.1 21.7c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3.3.9.9-3.2-.2-.3c-.9-1.4-1.3-3-1.3-4.6 0-4.7 3.9-8.6 8.6-8.6 2.3 0 4.5.9 6.1 2.5 1.6 1.6 2.5 3.8 2.5 6.1.1 4.8-3.7 8.6-8.5 8.6m7.3-15.9C17.5 3.8 14.9 2.8 12 2.8 6.2 2.8 1.5 7.5 1.5 13.3c0 1.9.5 3.7 1.4 5.3L1.4 24l5.5-1.4c1.6.9 3.3 1.3 5.1 1.3 5.8 0 10.5-4.7 10.5-10.5.1-2.8-1-5.4-3.1-7.4"/></svg>
+            +56 9 8267 5903
+          </a>
+        </article>
+
+        <article class="persona reveal">
+          <p class="nombre">Ignacio Echegaray</p>
+          <p class="rol">Gerente Comercial y Ventas</p>
+          <p class="bio">Primer contacto comercial con nuevos clientes. Conoce el comercio local, propone qué tiene sentido digitalizar y arma propuestas claras.</p>
+          <a class="wa" href="https://wa.me/56957845292?text=Hola%20Ignacio%2C%20me%20interesa%20conversar%20sobre%20un%20proyecto%20con%20Alto%20Cauce." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5 0-.1-.6-1.4-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2 0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3M12.1 21.7c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3.3.9.9-3.2-.2-.3c-.9-1.4-1.3-3-1.3-4.6 0-4.7 3.9-8.6 8.6-8.6 2.3 0 4.5.9 6.1 2.5 1.6 1.6 2.5 3.8 2.5 6.1.1 4.8-3.7 8.6-8.5 8.6m7.3-15.9C17.5 3.8 14.9 2.8 12 2.8 6.2 2.8 1.5 7.5 1.5 13.3c0 1.9.5 3.7 1.4 5.3L1.4 24l5.5-1.4c1.6.9 3.3 1.3 5.1 1.3 5.8 0 10.5-4.7 10.5-10.5.1-2.8-1-5.4-3.1-7.4"/></svg>
+            +56 9 5784 5292
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= CTA FINAL ========= -->
+  <section class="cta-final" id="contacto">
+    <div class="wrap cta-final-grid">
+      <div>
+        <span class="eyebrow">Contacto</span>
+        <h2 style="margin-top:14px">Conversemos.</h2>
+        <div class="cta-actions" style="margin-top:32px">
+          <a class="btn btn-primary" href="https://wa.me/56982675903?text=Hola%20Alto%20Cauce%2C%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5 0-.1-.6-1.4-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2 0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3M12.1 21.7c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3.3.9.9-3.2-.2-.3c-.9-1.4-1.3-3-1.3-4.6 0-4.7 3.9-8.6 8.6-8.6 2.3 0 4.5.9 6.1 2.5 1.6 1.6 2.5 3.8 2.5 6.1.1 4.8-3.7 8.6-8.5 8.6m7.3-15.9C17.5 3.8 14.9 2.8 12 2.8 6.2 2.8 1.5 7.5 1.5 13.3c0 1.9.5 3.7 1.4 5.3L1.4 24l5.5-1.4c1.6.9 3.3 1.3 5.1 1.3 5.8 0 10.5-4.7 10.5-10.5.1-2.8-1-5.4-3.1-7.4"/></svg>
+            WhatsApp · Marco / Pía
+          </a>
+          <a class="btn btn-ghost" href="https://wa.me/56957845292?text=Hola%20Ignacio%2C%20me%20interesa%20conversar%20sobre%20un%20proyecto%20con%20Alto%20Cauce." target="_blank" rel="noopener">
+            WhatsApp · Ignacio (comercial)
+          </a>
+        </div>
+      </div>
+
+      <aside class="cta-card">
+        <div class="line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><strong>Base</strong>Saltos del Laja · Región del Biobío · Chile</div>
+        </div>
+        <div class="line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 8.5 8.5 0 1 1 9-8.5z"/><path d="M8 11h.01M12 11h.01M16 11h.01"/></svg>
+          <div><strong>WhatsApp principal</strong>+56 9 8267 5903 — Marco / Pía</div>
+        </div>
+        <div class="line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div><strong>Comercial &amp; ventas</strong>+56 9 5784 5292 — Ignacio Echegaray</div>
+        </div>
+        <div class="line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div><strong>Tiempo de respuesta</strong>Días hábiles · normalmente bajo 12 horas</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+  </main>
+
+  <!-- ========= FOOTER ========= -->
+  <footer>
+    <div class="wrap foot">
+      <div class="foot-brand">
+        <img src="/alto-cauce-isologo.svg" alt="" />
+        Alto Cauce · Soluciones digitales con criterio humano
+      </div>
+      <div>© <span id="y"></span> Alto Cauce · Saltos del Laja, Biobío, Chile</div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const t = document.getElementById('navToggle');
+    const m = document.getElementById('navMobile');
+    if (t && m) {
+      t.addEventListener('click', () => {
+        const open = m.classList.toggle('open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+        t.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+      });
+      m.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        m.classList.remove('open');
+        t.setAttribute('aria-expanded', 'false');
+      }));
+    }
+
+    // Scroll reveal
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+    }
+  </script>
+</body>
+</html>

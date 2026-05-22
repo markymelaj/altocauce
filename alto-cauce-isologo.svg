@@ -1,0 +1,16 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="water" x1="68" y1="92" x2="164" y2="190" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="fire" x1="138" y1="116" x2="196" y2="182" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDBA74"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+  </defs>
+  <path d="M40 120L96 70L108 82L132 44L182 92C165.5 86.6 152.3 87.5 141 95.4C131 102.3 122.2 112.5 112 125.5C99.6 118.3 85.1 116.5 68 120H40Z" fill="#0F172A"/>
+  <path d="M88 120C111.7 120 129.9 126.1 142.6 138.3C155.3 150.5 169.1 156.7 184 157V190C171.4 188.8 160.1 185.2 150 179.1C139.7 173 129 170 118 170C104.2 170 91 174.8 78 184.5V144.5C82.2 134.2 85.5 126 88 120Z" fill="url(#water)"/>
+  <path d="M140 116C154.1 114.8 168.8 110.9 184 104V136C168 143.2 152 151.9 136 162L120 153C127.8 141.8 134.5 129.5 140 116Z" fill="url(#fire)"/>
+  <path d="M52 130C66 116.2 82.7 108.3 102 106.5C87.4 92.5 75 86.6 64.5 88.7C61.4 89.4 58.5 90.6 55.8 92.4L52 130Z" fill="#1E3A5F" opacity="0.92"/>
+</svg>
