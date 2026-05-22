@@ -1,106 +1,76 @@
-# Alto Cauce — versión actualizada (Saltos del Laja)
+# Alto Cauce — versión optimizada
 
-Sitio rehecho como **una sola página HTML autónoma**, sin React/Vite.
-Drop directo en `public_html` y listo. Sin `npm`, sin build, sin dependencias.
+Sitio estático de una sola página. Listo para subir directo a `public_html/`.
+No requiere React, Vite, npm ni proceso de build.
 
----
+## Qué se optimizó
 
-## Cambios principales respecto al sitio anterior
+- Se redujo el volumen de texto y se eliminaron explicaciones genéricas.
+- El hero quedó enfocado en lo que Alto Cauce hace: **webs, catálogos por WhatsApp y sistemas internos**.
+- Se pulió la tarjeta visual principal para evitar la frase “web / catálogo / control” como pieza central y comunicar mejor: presencia clara, venta directa y control interno.
+- Se reforzó la idea central: no hacer sitios decorativos, sino herramientas que ayuden a vender, responder y ordenar la operación.
+- Se cambió “Para quién” por una sección más directa: problemas reales que Alto Cauce resuelve.
+- La sección de proyectos ahora funciona como prueba comercial, no como lista decorativa.
+- Se incorporaron proyectos activos y demostrables, separando los públicos de los sistemas privados.
+- El proceso se resumió en cuatro pasos concretos: diagnóstico, primera entrega útil, implementación y mejora.
+- Equipo y contacto quedaron más claros: Marco y Pía aparecen como equipo de trabajo, pero el único contacto público por WhatsApp es Ignacio.
 
-### Posicionamiento del hero
-- **Antes**: "Desarrollo web con criterio humano" (genérico)
-- **Ahora**: **"Web, ventas, comunicación. *Optimizamos tu negocio.*"**
+## Proyectos mostrados
 
-### Foco geográfico y sectorial
-Reposicionado hacia el comercio local de Saltos del Laja: cabañas,
-minimarkets, supermercados, ferreterías, restaurantes/turismo y pymes en
-general. Sección "Para quién es esto" con tarjetas para cada rubro.
+### Destacados
 
-### Experiencia como argumento principal
-Reemplazadas todas las frases del tipo "no tenemos años de historia" por la
-afirmación opuesta: **"Llevamos años acompañando y potenciando proyectos y
-emprendimientos."**
+1. **Luminart Chile**  
+   Web corporativa, tienda virtual/catálogo y sistemas internos de operación.
 
-### Proyectos destacados
-1. **Bellavista** (`bellavista-topaz.vercel.app`) — caso principal, mismo
-   Saltos del Laja, multi-negocio (camping + minimarket + servicios). Captura
-   en `img/proyecto-bellavista.jpg`.
-2. **Paesaggio Vivero** (`vivero-xi-flax.vercel.app`) — segundo destacado,
-   catálogo B2B/B2C de Mendoza. Captura en `img/proyecto-paesaggio.jpg`.
-3. New Hotel Cruz del Sur + control operativo multi-región + slot abierto.
+2. **Bellavista**  
+   Sitio multi-servicio para ordenar camping, minimarket, eventos y servicios locales.
 
-### Equipo Alto Cauce
-Sección simplificada: solo el título **"Equipo Alto Cauce."** (sin eyebrow,
-sin párrafo introductorio).
+3. **Paesaggio Vivero**  
+   Catálogo para vivero productor, con enfoque minorista y mayorista.
 
-Sin fotos por decisión de marca. Tres tarjetas con nombre, rol y bio breve:
+### Complementarios
 
-| Persona | Rol | WhatsApp |
-|---|---|---|
-| **Marco Carbonetti** | Developer | +56 9 8267 5903 |
-| **Pía Faundez** | Administración | +56 9 8267 5903 |
-| **Ignacio Echegaray** | Gerente Comercial y Ventas | +56 9 5784 5292 |
-
-### CTA final
-Reducido al mínimo: eyebrow "Contacto", título **"Conversemos."**, los dos
-botones de WhatsApp y la tarjeta de datos a la derecha. Se eliminó el copy
-conversacional que pedía explicar el problema.
-
----
+- **Comanda Simple / New Hotel Cruz del Sur** — sistema interno de pedidos y estados para hotelería.
+- **Gantt Vivo** — seguimiento de planificación por link o QR.
+- **Red Nativa** — estructura digital para preinscripciones y gestión comercial de internet rural.
+- **localhost:3000** — laboratorio público de proyectos desplegados.
 
 ## Cómo desplegar
 
-1. Sube **todo el contenido** de esta carpeta a `public_html/`.
-2. **Borra estos archivos viejos** del despliegue anterior:
-   - `assets/index-*.js`
-   - `assets/index-*.css`
-   - `package-lock.json`
-   - La carpeta `assets/` completa puede irse.
-3. Verifica que el `.htaccess` haya quedado en su sitio (incluido, igual al
-   original: redirect www→no-www y forzado de HTTPS).
-4. Listo. No requiere build ni proceso de despliegue.
+1. Sube todo el contenido de esta carpeta a `public_html/`.
+2. Mantén el archivo `.htaccess` incluido.
+3. Si venías desde una versión con build, elimina archivos viejos de `assets/` que ya no se usen.
+4. Verifica que carguen correctamente:
+   - `/alto-cauce-isologo.svg`
+   - `/img/proyecto-bellavista.jpg`
+   - `/img/proyecto-paesaggio.jpg`
+   - `/avatar-marco.png`
+   - `/avatar-pia.png`
+   - `/avatar-ignacio.svg`
 
-## Archivos del paquete
+## Archivos incluidos
 
-```
+```txt
 altocauce-public_html/
-├── index.html                    ← nuevo (autónomo, ~49 KB)
-├── .htaccess                     ← preservado del original
+├── index.html
+├── .htaccess
+├── README.md
 ├── alto-cauce-logo.svg
-├── alto-cauce-isologo.svg        ← favicon
-├── alto-cauce-isologo.png        ← apple-touch-icon
-├── alto-cauce-social.png         ← OG image (mismo del original)
-├── avatar-marco.png              ← NO usado en esta versión, conservado
-├── avatar-pia.png                ← NO usado en esta versión, conservado
-├── avatar-ignacio.svg            ← NO usado en esta versión, conservado
-├── README.md                     ← este archivo
+├── alto-cauce-isologo.svg
+├── alto-cauce-isologo.png
+├── alto-cauce-social.png
+├── avatar-marco.png
+├── avatar-pia.png
+├── avatar-ignacio.svg
 └── img/
-    ├── proyecto-bellavista.jpg   ← captura 1600×1000, 167 KB
-    └── proyecto-paesaggio.jpg    ← captura 1600×1000, 99 KB
+    ├── proyecto-bellavista.jpg
+    └── proyecto-paesaggio.jpg
 ```
 
-**Nota sobre los avatars**: La versión actual del sitio NO muestra fotos
-del equipo. Los archivos quedaron en el paquete por si en el futuro se
-decide volver a mostrarlos.
+## Notas rápidas
 
----
-
-## Cambios menores que quizás quieras hacer
-
-- **OG image** (`alto-cauce-social.png`): es la misma del sitio anterior. Si
-  quieres que refleje el nuevo titular ("Web, ventas, comunicación. Optimizamos
-  tu negocio."), conviene regenerarla.
-- **Capturas de proyectos**: tomadas el 22 de mayo 2026. Si los sitios cambian
-  visualmente, regenera ambos JPG con la misma proporción 16:10.
-- **Bios del equipo**: están escritas en tono general. Si los tres quieren
-  ajustar las suyas con palabras propias, son cambios de una línea cada uno.
-
----
-
-## Stack técnico
-
-- HTML + CSS inline + 30 líneas de JS plano (menú móvil + scroll-reveal).
-- Fuentes desde Google Fonts: **Plus Jakarta Sans** (body) + **Instrument
-  Serif** (acentos editoriales en headlines).
-- Paleta original preservada (navy/sky/ember).
-- Sin bundle, sin build step, sin dependencias.
+- El sitio usa HTML, CSS inline y JS mínimo para menú móvil y animaciones.
+- Las fuentes siguen siendo Google Fonts: Plus Jakarta Sans e Instrument Serif.
+- La paleta original se mantiene: navy, sky y ember.
+- Los sistemas internos se comunican sin exponer datos privados de clientes.
+- Todos los enlaces de WhatsApp apuntan a Ignacio Echegaray: +56 9 5784 5292.
